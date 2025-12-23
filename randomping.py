@@ -1,6 +1,6 @@
-import random, requests
+import os, random, requests
 
-WEBHOOK_URL = "https://discord.com/api/webhooks/1453007516677046296/ZtnLRbkLrFVXDLGDADmmFUYmkdVAFkkyF2eYmAJ1YbYGnSQQXGrw5IMH5LoIN69Fk-m-"
+WEBHOOK_URL = os.environ["https://discord.com/api/webhooks/1453007516677046296/ZtnLRbkLrFVXDLGDADmmFUYmkdVAFkkyF2eYmAJ1YbYGnSQQXGrw5IMH5LoIN69Fk-m-"]
 
 USERS = [
   "987478292468744262",  # Devan
@@ -16,8 +16,8 @@ USERS = [
 pick = random.choice(USERS)
 
 requests.post(WEBHOOK_URL, json={
-  "content": f"Randomly chosen: <@{pick}> 😈, FUCK YOU",
+  "content": f"Fuck you <@{pick}> 😈",
   "allowed_mentions": {"users": [pick]}
 })
 
-print("Congrats you're the random one:", pick)
+print("Victim:", pick)
