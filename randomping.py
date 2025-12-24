@@ -1,6 +1,6 @@
 import os, random, requests
 
-WEBHOOK_URL = os.environ["https://discord.com/api/webhooks/1453007516677046296/ZtnLRbkLrFVXDLGDADmmFUYmkdVAFkkyF2eYmAJ1YbYGnSQQXGrw5IMH5LoIN69Fk-m-"]  # <-- change to this
+WEBHOOK_URL = os.environ["WEBHOOK_URL"]
 
 USERS = [
   "987478292468744262",
